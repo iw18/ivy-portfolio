@@ -1,0 +1,624 @@
+/* Variables */
+:root {
+    --paragraph-color: #d2d2d2;
+    --highlight-color: #81fafa;
+    --dark: #053543;
+    --secondary-dark: #686868; 
+    --secondary-blue: #46727e;
+}
+
+/* Reset default styling */
+html,body, h1, h2, h3, h4, h5, p, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Montserrat;
+}
+
+/* Base styles */
+body {
+    background: var(--dark);
+    overflow-x: hidden;
+}
+
+.button {
+    background: transparent;
+    border: 2px solid #105264;
+    width: 160px;
+    height: 50px;
+    border-radius: 4px;
+    color: #105264;
+}
+
+
+/* fonts */
+h1, h2, h3, h4 {
+    line-height: 1.3em;
+}
+h2, h3, h4 {
+    font-weight: normal;
+}
+p{
+    font-size: 0.8em;
+    color: var(--paragraph-color);
+}
+button, ul, li {
+    font-size: 0.9em;
+}
+
+h4{
+    font-size: 1.2em;
+}
+
+h3{
+    font-size: 1.4;
+}
+
+h2{
+    font-size: 1.5;
+}
+
+h1 {
+    font-size: 2.3em;
+}
+
+/* mobile styling */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.root {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 915px 915px 915px;
+}
+
+/* Introduction Page */
+.background {
+    background-image: url(portfolio-bkg.png);
+    position: absolute;
+    margin: 0 0 0 -114%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#top-navigation-bar{
+    display: none;
+}
+
+#intro-page {
+    z-index: 3;
+    grid-column: 1/6;
+    margin: auto;
+    grid-row: 1;
+    width: 100%;
+}
+
+#intro-page .name-is-text{
+    color: var(--secondary-dark);
+    grid-column: 3/8;
+}
+
+#intro-page .name-text{
+    color: var(--dark);
+    grid-column: 3/8;
+    grid-row: 2;
+}
+
+#intro-page .blurb-text{
+    color: var(--secondary-blue);
+    grid-column: 3/10;
+    grid-row: 3;
+    margin: 1% 0 0 0;
+}
+
+#intro-page .bio-text{
+    color: var(--secondary-dark);
+    grid-column: 3/9;
+    grid-row: 4;
+    line-height: 1.5em;
+    margin: 6% 0 0 0;
+}
+
+#intro-page button{
+    grid-column: 3/5;
+    grid-row: 5;
+    margin: 20% 0 0 0;
+}
+
+/*
+    ABOUT ME
+ */
+
+#about-me {    
+    display: block;
+    grid-row: 2;
+    grid-column: 1/6;
+    margin: auto;
+}
+
+#about-me .title {
+    grid-column: 2/6;
+    font-size: 28px;
+}
+
+#about-me .outline {
+    grid-column: 2/6;
+    width: 300px;
+    border: 1px solid #80fbf4;
+}
+
+#about-me .description {
+    grid-column: 2/10;
+    margin-top: 5%;   
+}
+
+#about-me .categories-container {
+    grid-column: 2/10;
+}
+
+#about-me .categories-container > button{
+    float: left;
+    padding-right: 23px;
+    padding-bottom: 12px;
+    border-bottom: 0.5px solid #d2d2d2;
+    text-decoration: none;
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #d2d2d2;
+}
+
+/* #about-me .categories-container .category:hover {
+    color: #80fbf4;
+    border-bottom-color: #80fbf4;
+} */
+
+#about-me .categories-container .category:focus {
+    color: var(--highlight-color);
+    border-bottom-color: var(--highlight-color);
+    outline: none;
+}
+
+#container > * {
+    color: var(--paragraph-color);
+}
+
+#container > .education-list {
+    list-style-type: none;
+}
+
+#container > .tech-list {
+    column-count: 2;
+}
+
+#about-me #container {
+    grid-column: 2/9;
+}
+
+#about-me .profile-pic {
+    width: 300px;
+    grid-column: 1/11;
+    margin-top: 3%;
+    margin: 3% auto 0;
+}
+
+/* EXPERIENCE */
+#experience {
+    display: block;
+    grid-column: 1/6;
+    margin: auto;
+    grid-row: 3;
+
+}
+
+#experience .title{
+    grid-column: 2/10;
+    font-size: 28px;
+
+}
+
+#experience .timeline {
+    height: 611px;
+    border: 2px solid #d2d2d2;
+    width: 0px;
+    grid-column: 1;
+    grid-row: 2/8;
+    margin: 0 auto;
+}
+
+#experience .event-container {
+    grid-column: 2/10;
+    gap: 5px;
+    margin-top: 11%;
+}
+
+#experience .event-container-left {
+    grid-column: 2/10;
+    gap: 5px;
+    margin-top: 11%;
+}
+
+#experience .bullet {
+    font-size: 25px;
+    grid-row: 1/3;
+    margin: auto;
+}
+
+#experience .year {
+    line-height: 2;
+    font-size: 17px;
+}
+
+
+#experience .place {
+    grid-column: 2/10;
+}
+
+#experience .explanation {
+    grid-column: 2/10;
+}
+
+
+/* FOOTER */
+
+#footer {
+    display: block;
+    grid-column: 1/6;
+    margin: auto;
+    grid-row: 4;
+
+}
+
+#footer .container {
+    grid-column: 1/10;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#footer .subtitle {
+    color: var(--secondary-blue);
+    margin-bottom: 8%;
+}
+
+#footer .title {
+    color: var(--highlight-color);
+    font-size: 26px;
+}
+
+#footer .contact-container {
+    display: grid;
+    grid-template-columns: 60px 60px 60px 60px 60px;
+    grid-column: 1/11;
+    margin-top: 5%;
+    margin-bottom: 14%;
+    grid-column: 5;
+}
+
+#footer .contact-container .logo {
+    margin: 0 auto;
+}
+
+#footer .contact-container .footer-logo {
+    width: 23px;
+    opacity: 30%;
+    filter: invert(1);
+}
+
+#footer .contact-container .footer-logo:hover {
+    opacity: 100%;
+}
+
+/* Small tablet */
+@media screen and (min-width: 620px){
+    body{
+        font-size: 20px;
+    }
+    
+    #experience .event-container {
+        grid-column: 2/10;
+        gap: 5px;
+        margin-top: 4%;
+    }
+    
+    #experience .event-container-left {
+        grid-column: 2/10;
+        gap: 5px;
+        margin-top: 4%;
+    }
+}
+
+@media screen and (min-width: 840px){
+    .background {
+        margin: 0 0 0 -85%;
+    }
+}
+
+/* Large table/Laptop */
+@media screen and (min-width: 960px){
+    body{
+        font-size: 20px;
+    }
+    #top-navigation-bar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: block;
+        transition: top 0.3s;
+    }
+    
+    #top-navigation-bar .nav-bar-grid a {
+        float: left;
+        display: block;
+        text-align: center;
+        padding: 15px;
+        text-decoration: none;
+        font-size: 15px;
+        color: var(--secondary-dark);
+    }
+    
+    #top-navigation-bar .nav-bar-grid a:hover {
+        color: white;
+    }
+
+    .background {
+        margin: 0 0 0 -59%;
+    }
+
+    #about-me .categories-container > button{
+        padding-right: 80px;
+    }
+    #experience .event-container-left {
+        grid-column: 2/10;
+        gap: 5px;
+        margin-top: 5%;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1120px){
+    body{
+        font-size: 20px;
+    }
+    .background {
+        margin: 0 0 0 -38%;
+    }
+    #about-me {    
+        display: block;
+        grid-row: 2;
+        grid-column: 1/6;
+    }
+    
+    #about-me .title {
+        grid-column: 2/6;
+        font-size: 28px;
+    }
+    
+    #about-me .outline {
+        grid-column: 2/6;
+        width: 300px;
+        border: 1px solid #80fbf4;
+    }
+    
+    #about-me .description {
+        grid-column: 2/7;
+        margin-top: 5%;   
+    }
+    
+    #about-me .categories-container {
+        grid-column: 2/7;
+    }
+    
+    #about-me .categories-container > button{
+        padding-right: 37px;
+    }
+    
+    #about-me #container {
+        grid-column: 2/7;
+    }
+    
+    #about-me .profile-pic {
+        width: 300px;
+        grid-column: 7/11;
+        margin-top: 3%;
+        grid-row: 3/9;
+    }
+    
+}
+
+/* Desktop */
+@media screen and (min-width: 1200px){
+    body{
+        font-size: 20px;
+    }
+
+    .background {
+        margin: 0 0 0 -38%;
+    }
+
+}
+
+@media screen and (min-width: 1380px){
+    body{
+        font-size: 20px;
+    }
+
+    .background {
+        margin: 0 -22%;
+    }
+
+    #intro-page .bio-text {
+        grid-column: 3/8;
+    }
+    
+    #about-me .title {
+        grid-column: 3/6;
+    }
+    
+    #about-me .outline {
+        grid-column: 3/6;
+    }
+    
+    #about-me .description {
+        grid-column: 3/7;
+    }
+    
+    #about-me .categories-container {
+        grid-column: 3/7;
+    }
+    
+    
+    #about-me #container {
+        grid-column: 3/7;
+    }
+    
+    #about-me .profile-pic {
+        width: 372px;
+        grid-column: 7/11;
+        margin-top: 3%;
+        grid-row: 1/9;
+    }
+
+    #experience .title{
+        grid-column: 3/10;
+    }
+    
+    #experience .timeline {
+        grid-column: 2;
+    }
+    
+    #experience .event-container {
+        grid-column: 3/10;
+    }
+    
+    #experience .event-container-left {
+        grid-column: 3/10;
+    }
+    
+    #experience .place {
+        grid-column: 3/10;
+    }
+    
+    #experience .explanation {
+        grid-column: 3/10;
+    }
+}
+
+@media screen and (min-width: 1590px){
+    body{
+        font-size: 20px;
+    }
+
+    .background {
+        margin: 0 -14%;
+    }
+}
+
+@media screen and (min-width: 1630px){
+    body{
+        font-size: 20px;
+    }
+
+    .background {
+        margin: 0;
+    }
+}
+
+
+@media screen and (min-width: 1900px){
+    body{
+        font-size: 20px;
+    }
+
+    .background {
+        margin: 0;
+    }
+    #intro-page .name-is-text{
+        grid-column: 4/8;
+    }
+    
+    #intro-page .name-text{
+        grid-column: 4/8;
+    }
+    
+    #intro-page .blurb-text{
+        grid-column: 4/10;
+    }
+    
+    #intro-page .bio-text{
+        grid-column: 4/9;
+    }
+    
+    #intro-page button{
+        grid-column: 4/5;
+    }
+}
+
+@media screen and (min-width: 1930px){
+    body{
+        font-size: 20px;
+    }
+
+    .background {
+        margin: 0;
+        background-image: none;
+        display: none;
+    }
+    
+    #intro-page .name-is-text{
+        color: var(--paragraph-color);
+    }
+    
+    #intro-page .name-text{
+        color: var(--paragraph-color);
+    }
+    
+    #intro-page .blurb-text{
+        color: var(--highlight-color);
+    }
+    
+    #intro-page .bio-text{
+        color: var(--paragraph-color);
+    }
+    
+    #intro-page button{
+
+        color: var(--paragraph-color);
+    }
+    
+    #about-me .title {
+        grid-column: 4/6;
+    }
+    
+    #about-me .outline {
+        grid-column: 4/6;
+    }
+    
+    #about-me .description {
+        grid-column: 4/7;
+    }
+    
+    #about-me .categories-container {
+        grid-column: 4/7;
+    }
+    
+    
+    #about-me #container {
+        grid-column: 4/7;
+    }
+    
+    #about-me .profile-pic {
+        width: 590px;
+        grid-column: 7/11;
+        margin: 0 auto;
+        grid-row: 1/9;
+    }
+    
+    #footer .subtitle {
+        color: var(--paragraph-color);
+    }
+}
