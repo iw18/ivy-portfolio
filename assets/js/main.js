@@ -14,6 +14,21 @@ var currentScrollPos = window.pageYOffset;
   prevScrollpos = currentScrollPos;
 }
 
+//loading
+
+var myVar;
+
+function loadPage() {
+    myVar = setTimeout(showPage, 3000);
+
+}
+
+function showPage() {
+    console.log("calling show page method")
+  document.getElementById("loading-screen").style.display = "none";
+  document.getElementById("root").style.display = "grid";
+  document.getElementById("background").style.display = "block";
+}
 
 //About me-------------------------------------------------------------------------------------
 const clearContent = () => {
