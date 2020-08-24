@@ -14,6 +14,7 @@ html,body, h1, h2, h3, h4, h5, p, a {
     text-decoration: none;
     font-family: Montserrat;
     height: 100%;
+    color: var(--paragraph-color);
 }
 
 /* Base styles */
@@ -200,6 +201,7 @@ h1 {
 
 #intro-page button .button-text{
     line-height: 2;
+    color: var(--dark);
 }
 
 /*
@@ -326,6 +328,7 @@ h1 {
 
 #experience .explanation {
     grid-column: 2/10;
+    color: var(--paragraph-color);
 }
 
 #experience .explanation > li {
@@ -333,6 +336,94 @@ h1 {
     font-size: 0.6em;
 }
 
+/* PROJECTS */
+#projects {
+    display: block;
+    grid-column: 1/6;
+    margin: auto;
+    grid-row: 4;
+    margin-bottom: 20%;
+}
+
+#projects .title{
+    grid-column: 2/10;
+    font-size: 28px;
+}
+
+#projects .project-container {
+    grid-column: 2/10;
+    gap: 5px;
+    margin-top: 11%;
+}
+
+
+
+#projects .name {
+    line-height: 2;
+    font-size: 17px;
+    grid-column: 1/4;
+    margin: 0 auto;
+    grid-row: 2;
+}
+
+#projects .name:hover {
+    color: var(--highlight-color);
+}
+
+#projects .name::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--highlight-color);
+    transition: width .3s;
+}
+
+#projects .name:hover::after {
+    width: 100%;
+}
+
+#projects .technology {
+    grid-column: 5/10;
+    line-height: 2;
+}
+
+#projects .explanation {
+    grid-column: 5/10;
+    color: white;
+}
+
+#projects .github-link {
+    grid-column: 5/8;
+    color: var(--paragraph-color);
+    grid-row: 9;
+}
+
+#projects .github-link:hover {
+    color: var(--highlight-color);
+}
+
+#projects .arrow {
+    grid-column: 8/10;
+    color: white;
+    text-align: center;
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+    grid-row: 9;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateX(0);
+    }
+    40% {
+      transform: translateX(-30px);
+    }
+    60% {
+      transform: translateX(-15px);
+    }
+}
 
 /* FOOTER */
 
@@ -340,7 +431,7 @@ h1 {
     display: block;
     grid-column: 1/6;
     margin: auto;
-    grid-row: 4;
+    grid-row: 5;
 
 }
 
@@ -573,6 +664,19 @@ h1 {
     #experience .explanation {
         grid-column: 3/10;
     }
+
+    #projects .project-container {
+        margin-top: 8%;
+    }
+
+    #projects .github-link {
+        grid-row: 11;
+    }
+    
+    #projects .arrow {
+        grid-row: 11;
+    }
+    
 }
 
 @media screen and (min-width: 1590px){
