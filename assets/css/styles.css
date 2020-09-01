@@ -675,6 +675,7 @@ h1 {
     
     #projects .arrow {
         grid-row: 11;
+        grid-column: 7;
     }
     
 }
